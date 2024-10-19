@@ -1,9 +1,13 @@
 package cl.bootcamp.backenddeveloper.repository
 
-import cl.bootcamp.backenddeveloper.room.Contact
+import android.util.Log
+import cl.bootcamp.backenddeveloper.model.Contact
 import cl.bootcamp.backenddeveloper.room.ContactDao
+import kotlinx.coroutines.flow.Flow
+
 
 class ContactRepository(private val contactDao: ContactDao) {
+
     suspend fun insert(contact: Contact) {
         contactDao.insert(contact)
     }
@@ -16,7 +20,7 @@ class ContactRepository(private val contactDao: ContactDao) {
         contactDao.delete(contact)
     }
 
-    suspend fun getAllContacts(): List<Contact> {
+    fun getAllContacts(): Flow<List<Contact>> {
         return contactDao.getAllContacts()
     }
 

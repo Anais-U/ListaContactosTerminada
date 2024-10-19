@@ -91,9 +91,9 @@ implementation("androidx.room:room-runtime:2.6.1")
 implementation("androidx.room:room-ktx:2.6.1")
 kapt("androidx.room:room-compiler:2.6.1")
 
-// Coil & Shimmer (Proceso de imagenes y skeleton)
+// Coil & Shimmer (Proceso de imagenes )
 implementation("io.coil-kt:coil-compose:2.7.0")
-implementation("com.valentinilk.shimmer:compose-shimmer:1.0.0")
+
 
 // Test
 androidTestImplementation("com.google.dagger:hilt-android-testing:2.51.1")
